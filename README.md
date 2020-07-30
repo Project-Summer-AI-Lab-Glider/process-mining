@@ -1,7 +1,10 @@
 ## Project Summer: AI Lab & Glider: Process mining
 ----------
 
-**Process mining** dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada ornare diam condimentum elementum. Duis molestie at velit vel tempor. Praesent non rhoncus arcu. Fusce ultrices lacus at quam posuere, vel faucibus odio elementum. Pellentesque mattis ligula metus, ac sagittis orci auctor finibus. Nam gravida massa diam, in dignissim ipsum faucibus eu.
+**Process mining** to zbiór narzędzi pozwalających na budowę modeli procesów zachodzących w projecie i ich weryfikację. Analiza przeprowadzana jest przy użyciu danych pochodzących z dzienników zdarzeń (logów), powszechnie dostępnych we współczesnych systemach informatycznych. Realne dane pozwalają na odkrycie ogólnej struktury działania firmy oraz zachodzącego w niej workflow. Celem naszego projektu jest odkrycie tego modelu procesu, na podstawie bazy maili wymienianych w trakcie trwania projektu.
+
+Praca inspirowana jest artykułem wydanym przez naukowców z Defence Science and Technology Edinburgh oraz MIT Lincoln Laboratory Lexington. W projekcie użyto 250 maili z Apache Camel oraz zdefiniowany został 'ground truth', czyli manualne określenie kategorii dla zbioru słów kluczowych, użytych w mailu. 
+
 
 ## Instalacja i setup środowiska
 Zanim zaczniesz pracę stwórz i aktywuj swoje wirtualne środowisko:
