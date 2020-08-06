@@ -1,25 +1,30 @@
+import argparse
+import logging
 import os
 import time
-import logging
-import requests
-import argparse
-import pandas as pd
-
+import uuid
+from typing import Dict, List
 from xml.etree import ElementTree as ET
-from typing import List, Dict
+
+import pandas as pd
+import requests
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import (NoSuchElementException,
+                                        StaleElementReferenceException)
 
+DATA_MAIL_DOWNLOAD_URL = 'http://mail-archives.apache.org/mod_mbox/camel-dev/201704.mbox/browser'
+DATA_USERS_DOWNLOAD_URL = 'http://mail-archives.apache.org/mod_mbox/camel-users/201704.mbox/browser'
+DATA_COMMITS_DOWNLOAD_URL = 'http://mail-archives.apache.org/mod_mbox/camel-commits/201704.mbox/browser'
+DATA_ISSUES_DOWNLOAD_URL = 'http://mail-archives.apache.org/mod_mbox/camel-issues/201704.mbox/browser'
 
-DATA_DOWNLOAD_BASE_URL = 'http://mail-archives.apache.org/mod_mbox/camel-dev/201704.mbox/browser'
 LOGGING_FORMAT = "[%(asctime)-15s] %(message)s"
 
 
-def __download_data(data_download_url: str = DATA_DOWNLOAD_BASE_URL) -> List[Dict[str, str]]:
+def __download_data(data_download_url: str, dtype: str) -> List[Dict[str, str]]:
     """
-    __download_data is the helper function used to download_data from DATA_DOWNLOAD_BASE_URL
+    __download_data is the helper function used to download_data from data_download_url
 
-    :param data_download_url: str = DATA_DOWNLOAD_BASE_URL, is the url to Apache mail database
+    :param data_download_url: str, is the url to Apache mail database
     :return: List[Dict[str, str]], is the data structure with raw mails data
     """
     driver = webdriver.Chrome()
@@ -29,7 +34,7 @@ def __download_data(data_download_url: str = DATA_DOWNLOAD_BASE_URL) -> List[Dic
 
     logging.info(f"Running {data_download_url} at Chrome driver.")
     logging.info("Waiting for page setting up.")
-    time.sleep(3)
+    time.sleep(5)
 
     page_count: int = len(driver.find_element_by_class_name("pages").find_elements_by_tag_name("a"))
 
@@ -40,8 +45,10 @@ def __download_data(data_download_url: str = DATA_DOWNLOAD_BASE_URL) -> List[Dic
 
         num_of_records: int = len(driver.find_element_by_id("msglist").find_elements_by_tag_name("tr")) - 1
         logging.info(f"There is {num_of_records} at page number {page_num + 1}.")
-
-        next_btn = driver.find_element_by_class_name("pages").find_elements_by_tag_name("a")[-1]
+        try:
+            next_btn = driver.find_element_by_class_name("pages").find_elements_by_tag_name("a")[-1]
+        except StaleElementReferenceException:
+            continue
 
         for i in range(num_of_records):
             logging.info(f"Getting record: {record_id} from page {page_num + 1}.")
@@ -60,14 +67,18 @@ def __download_data(data_download_url: str = DATA_DOWNLOAD_BASE_URL) -> List[Dic
                         "author": author.text,
                         "subject": subject.text,
                         "date": date.text,
-                        "content_url": content_url.get_attribute("href") or None
+                        "content_url": content_url.get_attribute("href") or None,
+                        "dtype": dtype
                     })
             except Exception:
                 logging.warning(f"Error during getting {record_id} from page {page_num + 1}.")
             record_id += 1
 
-        next_btn.click()
-        time.sleep(1)
+        try:
+            next_btn.click()
+        except StaleElementReferenceException:
+            return raw_data
+        time.sleep(3)
     return raw_data
 
 
@@ -110,21 +121,23 @@ def __save_data_to_path(raw_data: List[Dict[str, str]], path: str) -> bool:
     return True
 
 
-def load_data(path: str) -> None:
+def load_data(url: str, path: str, dtype: str) -> None:
     """
     load_data is the main function used to download data, basic preprocess and save it in specified path
 
     :param path: str, is the path to save data
     :return: None
     """
-    raw_data = __download_data(data_download_url=DATA_DOWNLOAD_BASE_URL)
+    raw_data = __download_data(data_download_url=url, dtype=dtype)
     if __save_data_to_path(raw_data, path):
         logging.warning(f"Successfully saved data to {path}.")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="""Script used to download data and save in data/ directory.
-                                                    You can specify path to save data.""")
+    parser = argparse.ArgumentParser(description="""
+                            Script used to download data and save in data/ directory.\n
+                            You can specify path to save data.
+                            """)
 
     parser.add_argument("-v", "--verbose", help="Setting verbose debug information.", action="store_true")
     parser.add_argument("-p", "--path", help="Path used to save data.")
@@ -145,4 +158,8 @@ if __name__ == "__main__":
         os.mkdir(OUTPUT_DIR)
         logging.info(f"{OUTPUT_DIR} was created successfully.")
 
-    load_data(path=args.path if args.path else f"{OUTPUT_DIR}/raw_data.csv")
+    urls = [DATA_USERS_DOWNLOAD_URL, DATA_COMMITS_DOWNLOAD_URL, DATA_ISSUES_DOWNLOAD_URL, DATA_MAIL_DOWNLOAD_URL]
+
+    for url, name in zip(urls, ["users", "commits", "issues", "mails"]):
+        filename = f"/{name}_data{uuid.uuid4()}.csv"
+        load_data(url, path=args.path + filename if args.path else OUTPUT_DIR + filename, dtype=name)
