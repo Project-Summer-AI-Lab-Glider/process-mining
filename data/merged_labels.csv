@@ -1,0 +1,251 @@
+,Email_ID,Trace_ID,Action,Date,Keyword_1,Keyword_2,Keyword_3,Keyword_4,Keyword_5
+0,1,1,commit changes,2017-04-14 10:42:39 UTC,commit,headerselectorproducer,support,value,key
+1,2,2,commit changes,2017-04-14 10:52:55 UTC,commit,rename,catalog,clash,runtimecatalog
+2,3,2,commit changes,2017-04-14 10:52:56 UTC,commit,rename,catalog,clash,runtimecatalog
+3,4,2,commit changes,2017-04-14 10:52:57 UTC,commit,rename,catalog,clash,runtimecatalog
+4,5,2,commit changes,2017-04-14 10:52:58 UTC,commit,rename,catalog,clash,runtimecatalog
+5,6,2,commit changes,2017-04-14 10:52:59 UTC,commit,rename,catalog,clash,runtimecatalog
+6,7,2,commit changes,2017-04-14 10:53:00 UTC,commit,rename,catalog,clash,runtimecatalog
+7,39,2,commit changes,2017-04-14 14:42:28 UTC,commit,rename,catalog,clash,runtimecatalog
+8,8,3,commit changes,2017-04-14 10:55:56 UTC,commit,ported,wiki,camel-ignite,adoc
+9,29,3,close pull request,2017-04-14 11:23:11 UTC,pull request,closed,camel-ignite,ported,wiki
+10,30,3,automated comment issue,2017-04-14 11:23:42 UTC,pull request,commented,closed,readme.adoc,add
+11,9,4,commit changes,2017-04-14 10:57:46 UTC,commit,test,camel-example-cxf-blueprint,pass,java
+12,10,4,commit changes,2017-04-14 10:57:47 UTC,commit,test,camel-example-cxf-tomcat,pass,java
+13,11,4,commit changes,2017-04-14 10:57:48 UTC,commit,test,camel-cxf-transport,pass,java
+14,12,4,commit changes,2017-04-14 10:57:49 UTC,commit,test,camel-example-loan-broker-jms,pass,java
+15,13,4,commit changes,2017-04-14 10:57:50 UTC,commit,test,camel-example-cdi-example,pass,java
+16,14,4,commit changes,2017-04-14 10:57:51 UTC,test,commit,pass,camel-example-cdi-test,java
+17,15,4,commit changes,2017-04-14 10:57:52 UTC,commit,test,camel-example-cdi-metrics,pass,java
+18,16,4,commit changes,2017-04-14 10:57:53 UTC,commit,test,camel-example-cdi-properties,pass,java
+19,17,4,commit changes,2017-04-14 10:57:54 UTC,commit,test,camel-example-reportincident,pass,java
+20,18,4,commit changes,2017-04-14 10:57:55 UTC,commit,test,camel-example-rest-servlet,pass,java
+21,19,4,commit changes,2017-04-14 10:57:56 UTC,commit,test,camel-example-pojo-messaging,pass,java
+22,20,4,commit changes,2017-04-14 10:57:57 UTC,commit,test,camel-example-management,pass,java
+23,21,4,commit changes,2017-04-14 10:57:58 UTC,commit,test,camel-example-spring-jms,pass,java
+24,22,4,commit changes,2017-04-14 10:57:59 UTC,commit,test,camel-example-osgi-rmi,pass,java
+25,23,4,commit changes,2017-04-14 10:58:00 UTC,test,commit,pass,camel-example-cafe,java
+26,24,4,commit changes,2017-04-14 10:58:01 UTC,test,commit,skip,java,xml
+27,25,4,commit changes,2017-04-14 10:58:02 UTC,test,commit,skip,java,xml
+28,26,4,commit changes,2017-04-14 10:58:03 UTC,commit,test,camel-example-cxf-osgi,pass,java
+29,27,4,commit changes,2017-04-14 10:58:04 UTC,commit,test,camel-example-loan-broker-cxf,pass,java
+30,28,4,commit changes,2017-04-14 10:58:05 UTC,commit,test,camel-example-cxf-proxy,pass,java
+31,32,4,close pull request,2017-04-14 11:40:12 UTC,test,pull request,closed,java,pass
+32,31,5,build system update,2017-04-14 11:26:43 UTC,fixed,jenkins,build,camel.trunk.notest,success
+33,35,5,build system update,2017-04-14 13:20:41 UTC,failure,build,jenkins,camel.trunk.notest,status
+34,42,5,build system update,2017-04-14 16:08:45 UTC,build,jenkins,failing,camel.trunk.notest,still
+35,44,5,build system update,2017-04-14 18:13:42 UTC,build,jenkins,failing,camel.trunk.notest,still
+36,99,5,build system update,2017-04-18 08:49:55 UTC,failing,build,still,jenkins,camel.trunk.notest
+37,112,5,build system update,2017-04-18 10:51:17 UTC,failing,build,jenkins,camel.trunk.notest,status
+38,156,5,build system update,2017-04-18 16:56:04 UTC,fixed,camel.trunk.notest,jenkins,build,status
+39,234,5,build system update,2017-04-19 11:51:33 UTC,jenkins,failure,build,camel.trunk.notest,system
+40,33,6,assign issue,2017-04-14 13:05:42 UTC,assigned,camel-infinispan,store,improvement,header
+41,34,6,issue update,2017-04-14 13:05:42 UTC,updated,camel-infinispan,store,improvement,fix version
+42,93,6,work started issue,2017-04-18 07:56:41 UTC,camel-infinispan,header,store,started,
+43,36,7,commit changes,2017-04-14 14:18:45 UTC,svn,commit,update,website,buildbot
+44,37,8,commit changes,2017-04-14 14:26:14 UTC,commit,documentation,java,adoc,components/camel-cdi/src/main/docs/cdi.adoc
+45,38,8,commit changes,2017-04-14 14:35:24 UTC,commit,documentation,testing,cdi,update
+46,40,8,commit changes,2017-04-14 14:53:30 UTC,commit,exception,polish,multi-catch,java
+47,41,8,commit changes,2017-04-14 15:39:24 UTC,commit,transactionerrorhandler,support,xml,cdi
+48,43,9,ask a question,2017-04-14 17:15:23 UTC,multiple,traversing,response,route,tried
+49,45,10,ask a question,2017-04-14 20:39:13 UTC,bean,transform,question,option,format
+50,48,10,provide support,2017-04-16 07:27:20 UTC,bean,api,transformation,message,processor
+51,46,11,ask a question,2017-04-16 03:49:18 UTC,error,websocket,port,binding,poc
+52,49,11,provide support,2017-04-16 07:27:52 UTC,websocket,old,port,binding,error
+53,47,12,distribute situational awareness,2017-04-16 07:22:58 UTC,review,feedback,trustradius,linkedin,developer
+54,50,13,create issue,2017-04-16 07:31:41 UTC,created,camel-ssh,header,improvement,message
+55,51,13,provide support,2017-04-16 07:31:43 UTC,ticket,support,header,logged,username/password
+56,54,13,assign issue,2017-04-17 11:32:41 UTC,header,reassigned,camel-ssh,username/password,assigned
+57,80,13,open pull request,2017-04-18 07:22:10 UTC,ssh,credential,opened,pull request,header
+58,81,13,automated comment issue,2017-04-18 07:22:42 UTC,commented,camel-ssh,pull request,header,username/password
+59,119,13,commit changes,2017-04-18 11:21:42 UTC,fix,naming,commit,impl,ssh
+60,120,13,issue update,2017-04-18 11:22:41 UTC,camel-ssh,updated,header,fix,fix version
+61,121,13,resolve issue,2017-04-18 11:23:41 UTC,resolved,camel-ssh,fixed,header,username/password
+62,122,13,close pull request,2017-04-18 11:24:47 UTC,credential,ssh,closed,set,pull request
+63,123,13,automated comment issue,2017-04-18 11:25:41 UTC,camel-ssh,commented,closed,header,pull request
+64,52,14,ask a question,2017-04-16 22:46:11 UTC,hystrix,suggest,threadpool,configuration,usecase
+65,111,14,provide support,2017-04-18 10:44:12 UTC,hystrix,route,inject,dynamically,property
+66,160,14,close question,2017-04-19 03:40:13 UTC,hystrix,response,inject,dynamically,route
+67,53,15,ask a question,2017-04-17 10:08:36 UTC,delete,file,.camel,outside,issue
+68,82,15,provide support,2017-04-18 07:25:40 UTC,file,delete,access,not able,denied
+69,55,16,ask a question,2017-04-17 15:56:13 UTC,issue,encoding,tokenize,grouping,fixed
+70,56,17,ask a question,2017-04-17 16:45:13 UTC,split,json,sql,component,battle
+71,57,17,provide support,2017-04-17 17:40:41 UTC,json,split,resultset,database,batch
+72,58,17,update question,2017-04-17 17:49:25 UTC,json,split,maxmessagesperpoll,record,not
+73,59,17,provide support,2017-04-17 18:21:25 UTC,split,json,resultset,suggest,whole
+74,60,17,update question,2017-04-17 18:32:24 UTC,json,split,try,file,i'll try
+75,61,18,create issue,2017-04-18 01:35:42 UTC,bug,created,itest,camel-protobuf,fail
+76,62,18,issue update,2017-04-18 01:36:41 UTC,updated,itest,camel-protobuf,fail,bug
+77,63,18,issue update,2017-04-18 01:37:41 UTC,updated,camel-protobuf,itest,component/s,fail
+78,64,18,issue update,2017-04-18 01:37:41 UTC,updated,itest,camel-protobuf,label,fail
+79,65,18,issue update,2017-04-18 01:52:41 UTC,updated,camel-protobuf,itest,fail,description
+80,66,18,issue update,2017-04-18 01:53:41 UTC,updated,itest,camel-protobuf,fail,description
+81,67,18,assign issue,2017-04-18 02:22:42 UTC,camel-protobuf,itest,assigned,reassigned,fail
+82,68,18,issue comment,2017-04-18 02:25:41 UTC,dependency,camel-protobuf,commented,fail,missed
+83,69,18,open pull request,2017-04-18 02:28:26 UTC,add,pull request,protobuf-guava-version,declaration,missing
+84,70,18,automated comment issue,2017-04-18 02:28:42 UTC,pull request,commented,camel-protobuf,itest,fail
+85,73,18,commit changes,2017-04-18 06:46:50 UTC,commit,declaration,protobuf-guava-version,missing,feature
+86,74,18,close pull request,2017-04-18 06:47:17 UTC,closed,protobuf-guava-version,pull request,missing,add
+87,75,18,automated comment issue,2017-04-18 06:47:41 UTC,closed,itest,camel-protobuf,commented,pull request
+88,78,18,issue update,2017-04-18 07:07:41 UTC,updated,test,itest,camel-protobuf,issue
+89,79,18,resolve issue,2017-04-18 07:07:41 UTC,fixed,camel-protobuf,resolved,fail,itest
+90,71,19,ask a question,2017-04-18 04:11:28 UTC,route,file,folder,re-use,query
+91,72,19,update question,2017-04-18 04:13:56 UTC,beginner,route,file,name,camel
+92,83,19,provide support,2017-04-18 07:29:15 UTC,route,filename,option,camel,look
+93,176,19,ask a question,2017-04-19 07:57:38 UTC,issue,route,tried,file name,error
+94,177,19,provide support,2017-04-19 08:00:23 UTC,filefilter,route,dynamic,detail,file
+95,76,20,commit changes,2017-04-18 06:48:14 UTC,upgrade,amq,commit,git,dependency
+96,77,21,create issue,2017-04-18 07:04:42 UTC,created,spring-boot,camel-hbase,fails,test
+97,87,21,issue comment,2017-04-18 07:42:42 UTC,commented,spring-boot,itest,fails,camel-hbase
+98,94,21,issue comment,2017-04-18 08:08:42 UTC,spring-boot,commented,fails,itest,checking
+99,108,21,commit changes,2017-04-18 09:28:42 UTC,dependency,test,load,commit,do not
+100,109,21,issue comment,2017-04-18 09:31:41 UTC,spring-boot,commented,fails,itest,camel-hbase
+101,168,21,issue update,2017-04-19 07:32:41 UTC,spring-boot,camel-hbase,updated,test,fails
+102,169,21,resolve issue,2017-04-19 07:32:41 UTC,spring-boot,camel-hbase,resolved,fixed,itest
+103,170,21,assign issue,2017-04-19 07:32:41 UTC,spring-boot,camel-hbase,reassigned,assigned,itest
+104,84,22,issue update,2017-04-18 07:34:41 UTC,camel-solr,updated,removed,readme,build
+105,85,22,issue comment,2017-04-18 07:34:41 UTC,camel-solr,readme,removed,commented,camel-ignite
+106,86,22,issue comment,2017-04-18 07:41:41 UTC,camel-solr,commented,maven,removed,camel-ignite
+107,127,22,issue comment,2017-04-18 12:13:41 UTC,camel-solr,readme,commented,removed,build
+108,128,22,issue update,2017-04-18 12:13:41 UTC,camel-solr,camel-ignite,updated,readme,removed
+109,131,22,issue comment,2017-04-18 12:17:41 UTC,commented,camel-solr,apt-error,readme,log file
+110,136,22,issue comment,2017-04-18 12:34:42 UTC,camel-solr,commented,camel-ignite,removed,readme
+111,162,22,issue comment,2017-04-19 06:14:41 UTC,readme,commented,removed,camel-solr,camel-ignite
+112,167,22,issue comment,2017-04-19 07:08:41 UTC,commented,ticket,camel-solr,camel-ignite,issue
+113,171,22,issue update,2017-04-19 07:46:41 UTC,camel-ignite,removed,updated,readme,build
+114,172,22,issue comment,2017-04-19 07:46:41 UTC,removed,commented,readme,mvn,camel-ignite
+115,209,22,open pull request,2017-04-19 09:09:49 UTC,maven-antrun-plugin,opened,pull request,remove,dir
+116,214,22,commit changes,2017-04-19 09:17:59 UTC,commit,maven-antrun-plugin,dir,remove,data
+117,215,22,close pull request,2017-04-19 09:19:19 UTC,closed,maven-antrun-plugin,pull request,remove,dir
+118,216,22,issue comment,2017-04-19 09:20:41 UTC,camel-ignite,commented,fixed,removed,readme
+119,88,23,assign issue,2017-04-18 07:44:41 UTC,documentation,websocket,reassigned,implementation,improve
+120,89,23,issue comment,2017-04-18 07:44:41 UTC,documentation,commented,websocket,improve,verify
+121,90,24,version release planning,2017-04-18 07:45:20 UTC,roadmap,test,passing,itest,camel
+122,174,24,version release planning,2017-04-19 07:54:25 UTC,issue,roadmap,test,@generated,resolved
+123,233,24,version release planning,2017-04-19 11:39:20 UTC,roadmap,spring boot,version,java 9,@generated
+124,239,24,version release planning,2017-04-19 12:21:57 UTC,roadmap,loadbalancer,update,refactoring,doc
+125,91,25,create issue,2017-04-18 07:54:41 UTC,camel-infinispan,created,operation,improvement,command
+126,92,25,issue update,2017-04-18 07:55:41 UTC,updated,camel-infinispan,operation,discrepancy,command
+127,95,26,create issue,2017-04-18 08:11:41 UTC,deployment,camel-kubernetes,created,support,new feature
+128,96,27,create issue,2017-04-18 08:17:41 UTC,daemonset,camel-kubernetes,created,support,new feature
+129,97,28,create issue,2017-04-18 08:19:41 UTC,job,camel-kubernetes,created,support,new feature
+130,98,29,create issue,2017-04-18 08:21:41 UTC,ingres,camel-kubernetes,created,support,new feature
+131,100,30,issue comment,2017-04-18 08:57:41 UTC,xerces,commented,accessexternaldtd,property,wrong
+132,101,30,issue update,2017-04-18 08:59:41 UTC,xerces,updated,accessexternaldtd,version/s,fix
+133,104,30,issue comment,2017-04-18 09:00:50 UTC,commented,release,accessexternaldtd,xerces,property
+134,102,31,create issue,2017-04-18 08:59:41 UTC,created,doc,ascii,task,component
+135,106,31,commit changes,2017-04-18 09:25:03 UTC,doc,ascii,commit,component,warn
+136,107,31,resolve issue,2017-04-18 09:25:41 UTC,resolved,ascii,doc,component,fixed
+137,103,32,commit changes,2017-04-18 09:00:40 UTC,docker,upgrade,java,commit,version
+138,105,33,commit changes,2017-04-18 09:08:19 UTC,pom.xml,camel-catalog,fix,javadoc,commit
+139,110,34,create issue,2017-04-18 10:18:42 UTC,improvement,created,service-call,customize,component
+140,114,34,commit changes,2017-04-18 11:09:43 UTC,documentation,servicecall,eip,commit,add
+141,126,34,work started issue,2017-04-18 11:58:41 UTC,customize,work started,service-call,property,component
+142,138,34,resolve issue,2017-04-18 12:40:41 UTC,closed,invalid,service-call,resolution,property
+143,113,35,commit changes,2017-04-18 11:08:29 UTC,example,commit,polished,servicecall,git commit
+144,124,35,commit changes,2017-04-18 11:38:19 UTC,example,polished,commit,servicecall,bash
+145,115,36,open pull request,2017-04-18 11:10:54 UTC,protobuf,opened,issue,pull request,support
+146,117,36,commit changes,2017-04-18 11:21:09 UTC,camel-protobuf,gmaven-plugin,commit,set,version
+147,118,36,commit changes,2017-04-18 11:21:10 UTC,support,camel-protobuf,check,commit,plugin
+148,125,36,close pull request,2017-04-18 11:42:51 UTC,closed,protobuf,issue,pull request,github
+149,129,37,open pull request,2017-04-18 12:14:39 UTC,camel-grpc,opened,support,pull request,protobuf
+150,132,37,commit changes,2017-04-18 12:26:07 UTC,camel-grpc,protobuf,commit,support,check
+151,133,37,close pull request,2017-04-18 12:26:22 UTC,closed,camel-grpc,pull request,support,check
+152,116,38,commit changes,2017-04-18 11:17:25 UTC,stringutils,objecthelper,commit,avoid,favor
+153,130,39,create issue,2017-04-18 12:14:41 UTC,camel-rest,created,check,improvement,content-type
+154,134,40,commit changes,2017-04-18 12:27:16 UTC,upgrade,kubernetes,model,version,commit
+155,135,40,commit changes,2017-04-18 12:27:17 UTC,upgrade,kubernetes,client,version,commit
+156,137,41,commit changes,2017-04-18 12:35:02 UTC,component,description,commit,add,table
+157,144,41,commit changes,2017-04-18 14:04:53 UTC,component,commit,description,add,table
+158,145,41,commit changes,2017-04-18 14:04:54 UTC,regen,commit,changed,milo,user-manual
+159,152,41,close pull request,2017-04-18 15:05:28 UTC,component,closed,pull request,add,table
+160,153,41,automated comment issue,2017-04-18 15:05:41 UTC,camel-milo,closed,test,pull request,commented
+161,227,41,commit changes,2017-04-19 11:04:44 UTC,polished,commit,camel,milo client,milo server
+162,139,42,ask a question,2017-04-18 12:53:34 UTC,soap,request,response,active mq,put
+163,154,42,ask a question,2017-04-18 15:20:06 UTC,jms,reply,request,help,soap
+164,140,43,create issue,2017-04-18 13:15:41 UTC,annotation,created,improvement,generated,add
+165,141,43,commit changes,2017-04-18 13:17:12 UTC,annotation,commit,generated,add,code
+166,142,43,resolve issue,2017-04-18 13:17:41 UTC,resolved,annotation,generated,add,implemented
+167,201,43,reopen issue,2017-04-19 08:39:41 UTC,reopened,annotation,@generated,property,optional
+168,204,43,commit changes,2017-04-19 08:48:23 UTC,commit,annotation,optional,@generated,default
+169,205,43,resolve issue,2017-04-19 08:49:41 UTC,resolved,fixed,annotation,@generated,rest
+170,143,44,ask a question,2017-04-18 13:47:39 UTC,camel-sql,exception,clause,throw,bug
+171,146,44,provide support,2017-04-18 14:05:59 UTC,camel-sql,exception,version,try,clause
+172,155,44,close question,2017-04-18 15:37:49 UTC,camel-sql,exception,worked,clause,thanks
+173,166,44,provide support,2017-04-19 07:07:12 UTC,release,exception,camel-sql,work,throw
+174,147,45,create issue,2017-04-18 14:19:41 UTC,salesforce,created,annotation,add,improvement
+175,217,45,commit changes,2017-04-19 09:45:35 UTC,salesforce,commit,annotation,add,@generated
+176,218,45,resolve issue,2017-04-19 09:46:41 UTC,resolved,salesforce,annotation,implemented,@generated
+177,148,46,create issue,2017-04-18 14:22:41 UTC,annotation,created,springbootautoconfigurationmojo,improvement,add
+178,149,46,commit changes,2017-04-18 14:40:02 UTC,commit,annotation,generated,springbootautoconfigurationmojo,add
+179,150,46,resolve issue,2017-04-18 14:40:41 UTC,resolved,springbootautoconfigurationmojo,annotation,implemented,add
+180,163,46,issue comment,2017-04-19 07:05:41 UTC,commented,timestamp,annotation,springbootautoconfigurationmojo,include
+181,164,46,reopen issue,2017-04-19 07:06:41 UTC,reopened,springbootautoconfigurationmojo,annotation,@generated,add
+182,165,46,issue comment,2017-04-19 07:06:41 UTC,annotation,springbootautoconfigurationmojo,commented,@generated,same
+183,187,46,commit changes,2017-04-19 08:35:46 UTC,commit,annotation,springbootautoconfigurationmojo,remove,@generated
+184,188,46,commit changes,2017-04-19 08:35:47 UTC,commit,add,annotation,@generated,code
+185,189,46,commit changes,2017-04-19 08:35:48 UTC,commit,add,annotation,@generated,code
+186,190,46,commit changes,2017-04-19 08:35:49 UTC,commit,add,annotation,@generated,code
+187,191,46,commit changes,2017-04-19 08:35:50 UTC,commit,add,annotation,@generated,code
+188,192,46,commit changes,2017-04-19 08:35:51 UTC,commit,add,annotation,@generated,code
+189,193,46,commit changes,2017-04-19 08:35:52 UTC,commit,add,annotation,@generated,code
+190,194,46,commit changes,2017-04-19 08:35:53 UTC,commit,add,annotation,@generated,code
+191,195,46,commit changes,2017-04-19 08:35:54 UTC,commit,add,annotation,@generated,code
+192,196,46,commit changes,2017-04-19 08:35:55 UTC,commit,add,annotation,@generated,code
+193,197,46,commit changes,2017-04-19 08:35:56 UTC,commit,add,annotation,@generated,code
+194,198,46,commit changes,2017-04-19 08:35:57 UTC,commit,annotation,add,springbootautoconfigurationmojo,@generated
+195,200,46,resolve issue,2017-04-19 08:38:41 UTC,resolved,fixed,annotation,springbootautoconfigurationmojo,generated
+196,211,46,commit changes,2017-04-19 09:14:38 UTC,commit,annotation,remove,@generated,springbootautoconfigurationmojo
+197,151,47,commit changes,2017-04-18 14:53:26 UTC,commit,ribbon,service call,load balancer,confgire
+198,157,48,issue comment,2017-04-18 21:13:41 UTC,camel-hdfs2,commented,initialdelay,overwritten,fails
+199,158,48,issue comment,2017-04-18 21:15:42 UTC,camel-hdfs2,commented,fails,initialdelay,overwrite
+200,159,48,issue comment,2017-04-18 21:18:41 UTC,fix,camel-hdfs2,initialdelay,commented,thanks
+201,182,48,commit changes,2017-04-19 08:05:09 UTC,camel-hdfs2,commit,overwritten,initialdelay,option
+202,183,48,commit changes,2017-04-19 08:08:27 UTC,commit,camel-hdfs2,initialdelay,overwritten,option
+203,184,48,issue comment,2017-04-19 08:10:41 UTC,camel-hdfs2,fixed,initialdelay,commented,overwritten
+204,185,48,commit changes,2017-04-19 08:10:44 UTC,camel-hdfs2,commit,overwritten,initialdelay,option
+205,161,49,ask a question,2017-04-19 05:10:16 UTC,parsing,issue,unmarshal,csv,bug
+206,230,49,assign issue,2017-04-19 11:37:41 UTC,camel-bindy,csv,assigned,unbinding,embedded
+207,231,49,open pull request,2017-04-19 11:38:12 UTC,opened,pull request,quotingescaped,added,option
+208,232,49,automated comment issue,2017-04-19 11:38:41 UTC,camel-bindy,commented,opened,csv,pull request
+209,173,50,create issue,2017-04-19 07:47:41 UTC,annotation,created,problem,@generated,java 9
+210,175,50,assign issue,2017-04-19 07:56:41 UTC,annotation,problem,assigned,reassigned,java 9
+211,178,50,issue comment,2017-04-19 08:01:41 UTC,annotation,commented,problem,java 9,@generated
+212,220,50,open pull request,2017-04-19 10:33:12 UTC,camel-package-maven-plugin,opened,pull request,work,java 9
+213,221,50,automated comment issue,2017-04-19 10:33:41 UTC,commented,java 9,pull request,annotation,@generated
+214,222,50,commit changes,2017-04-19 10:52:10 UTC,camel-package-maven-plugin,work,make,commit,java 9
+215,223,50,close pull request,2017-04-19 10:52:29 UTC,camel-package-maven-plugin,closed,pull request,make,work
+216,224,50,automated comment issue,2017-04-19 10:52:41 UTC,closed,commented,pull request,annotation,java 9
+217,225,50,resolve issue,2017-04-19 11:00:47 UTC,resolved,java 9,annotation,problem,fixed
+218,226,50,assign issue,2017-04-19 11:00:47 UTC,java 9,annotation,reassigned,@generated,assigned
+219,186,51,build system update,2017-04-19 08:31:14 UTC,jenkins,build,failure,camel.2.17.x.notest,status
+220,179,52,commit changes,2017-04-19 08:02:24 UTC,close,commit,repository,updated,git commit
+221,180,52,close pull request,2017-04-19 08:02:44 UTC,closed,improve,pull request,performance,caseinsensiti
+222,181,52,automated comment issue,2017-04-19 08:03:41 UTC,commented,pull request,caseinsensitivemap,closed,performance
+223,199,53,commit changes,2017-04-19 08:35:58 UTC,commit,documentation,component,regenerate,update
+224,210,53,commit changes,2017-04-19 09:14:37 UTC,documentation,regenerate,commit,component,list
+225,202,54,ask a question,2017-04-19 08:42:49 UTC,folder,check,exists,startup,help
+226,207,54,provide support,2017-04-19 09:05:02 UTC,check,folder,write,code,exists
+227,243,54,close question,2017-04-19 12:30:24 UTC,folder,exists,check,solve,startup
+228,203,55,commit changes,2017-04-19 08:44:54 UTC,upgrade,wiremock,commit,version,pom.xml
+229,206,56,build system update,2017-04-19 08:51:49 UTC,build,jenkins,failure,camel.2.18.x.notest,status
+230,208,57,create issue,2017-04-19 09:08:41 UTC,include,name,created,check,improvement
+231,212,57,commit changes,2017-04-19 09:15:57 UTC,check,commit,name,include,spring boot
+232,213,57,resolve issue,2017-04-19 09:16:41 UTC,resolved,name,fixed,check,spring boot
+233,219,58,assign issue,2017-04-19 10:18:41 UTC,camel-twitter,camel-ignite,assigned,separated,endpoint
+234,228,59,issue update,2017-04-19 11:11:41 UTC,update,description,updated,complexity,readme
+235,229,60,create issue,2017-04-19 11:14:41 UTC,created,deprecationnote,add,@metadata,improvement
+236,235,61,commit changes,2017-04-19 11:53:09 UTC,upgrade,spring,commit,camel,repository
+237,236,61,commit changes,2017-04-19 11:53:10 UTC,upgrade,integration,spring,commit,camel
+238,237,62,commit changes,2017-04-19 11:57:57 UTC,cxf,upgrade,commit,camel,repository
+239,240,62,commit changes,2017-04-19 12:26:53 UTC,cxf,upgrade,commit,camel,repository
+240,238,63,open pull request,2017-04-19 12:21:29 UTC,example,clean,pull request,opened,camel-milo
+241,245,63,commit changes,2017-04-19 12:31:03 UTC,application,commit,clean,example,camel-milo
+242,246,63,close pull request,2017-04-19 12:31:17 UTC,closed,pull request,example,application,clean
+243,241,64,ask a question,2017-04-19 12:27:35 UTC,camel-swagger-java,fails,spring boot,update,tried
+244,242,64,ask a question,2017-04-19 12:29:00 UTC,version,spring boot,camel-swagger-java,fails,what
+245,244,64,update question,2017-04-19 12:30:59 UTC,version,fails,camel-swagger-java,spring boot,forgot
+246,247,64,provide support,2017-04-19 12:35:40 UTC,exception,camel-swagger-java,spring boot,noclassdeffounderror,fails
+247,248,64,ask a question,2017-04-19 13:08:24 UTC,error,spring boot,camel-swagger-java,tried,fails
+248,249,64,ask a question,2017-04-19 13:27:36 UTC,spring boot,dependency,ticket,related,fails
+249,250,65,publicity,2017-04-19 13:27:37 UTC,podcast,floss,show,weekly,offer
