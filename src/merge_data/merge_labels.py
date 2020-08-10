@@ -5,6 +5,8 @@ import time
 import pandas as pd
 import numpy as np
 
+LOGGING_FORMAT = "[%(asctime)-15s] %(message)s"
+
 
 def load_labels() -> pd.DataFrame:
     """
@@ -56,6 +58,7 @@ if __name__ == "__main__":
                             You can specify path to save data.
                             """)
 
+    parser.add_argument("-v", "--verbose", help="Setting verbose debug information.", action="store_true")
     parser.add_argument("-p", "--path", help="Path used to save data.")
     args = parser.parse_args()
 
