@@ -47,6 +47,7 @@ def concat_data(data: List[pd.DataFrame]) -> pd.DataFrame:
 def update_dates(df: pd.DataFrame) -> None:
     df['date'] = df['date'] + ' 2017'
     df['date'] = pd.to_datetime(df['date'], format="%a, %d %b, %H:%M %Y")
+    df['date'] = df['date'].astype(str).str[:-3]
 
 
 def save_data(data: pd.DataFrame, path: str) -> None:

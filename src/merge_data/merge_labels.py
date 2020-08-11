@@ -51,7 +51,7 @@ def save_labels(data: pd.DataFrame, path: str) -> None:
 
 def update_dates(df: pd.DataFrame) -> None:
     df['Date'] = df['Date'].str.replace(r' UTC$', '')
-    df['Date'] = df['Date'].dt.floor('T')
+    df['Date'] = df['Date'].astype(str).str[:-3]
 
 
 if __name__ == "__main__":
