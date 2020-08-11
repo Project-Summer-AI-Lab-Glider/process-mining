@@ -1,11 +1,13 @@
 import argparse
 import logging
 import os
+
+import datetime
 import time
+
 from typing import List
 
 import pandas as pd
-import numpy as np
 
 LOGGING_FORMAT = "[%(asctime)-15s] %(message)s"
 
@@ -35,10 +37,16 @@ def concat_data(data: List[pd.DataFrame]) -> pd.DataFrame:
     :return: pd.DataFrame
     """
     df = pd.concat(data)
+
     df.drop('Unnamed: 0', axis=1, inplace=True)
     logging.info(f"Successfully concated data")
 
     return df
+
+
+def update_dates(df: pd.DataFrame) -> None:
+    df['date'] = df['date'] + ' 2017'
+    df['date'] = pd.to_datetime(df['date'], format="%a, %d %b, %H:%M %Y")
 
 
 def save_data(data: pd.DataFrame, path: str) -> None:
@@ -90,4 +98,5 @@ if __name__ == "__main__":
     DATA_LIST = load_data(DATA_URLS)
     DATA = concat_data(DATA_LIST)
 
+    update_dates(DATA)
     save_data(DATA, path)

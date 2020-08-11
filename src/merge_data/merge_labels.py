@@ -1,9 +1,7 @@
 import argparse
 import logging
 import os
-import time
 import pandas as pd
-import numpy as np
 
 LOGGING_FORMAT = "[%(asctime)-15s] %(message)s"
 
@@ -51,6 +49,11 @@ def save_labels(data: pd.DataFrame, path: str) -> None:
         logging.info(f'Save error')
 
 
+def update_dates(df: pd.DataFrame) -> None:
+    df['Date'] = df['Date'].str.replace(r' UTC$', '')
+    df['Date'] = df['Date'].dt.floor('T')
+
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="""
@@ -76,4 +79,5 @@ if __name__ == "__main__":
     filename = '/merged_labels.csv'
     path = args.path + filename if args.path else DATA_DIR + filename
 
+    update_dates(data)
     save_labels(data, path)
