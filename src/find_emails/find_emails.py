@@ -1,6 +1,6 @@
 import argparse
-import logging
 import os
+import logging
 import pandas as pd
 
 LOGGING_FORMAT = "[%(asctime)-15s] %(message)s"
@@ -10,14 +10,28 @@ def find_emails() -> pd.DataFrame:
     data = pd.read_csv(f'{DATA_DIR}/merged_data.csv')
     labels = pd.read_csv(f'{DATA_DIR}/merged_labels.csv')
     final = pd.DataFrame()
+    key_words = []
 
     for label_index, label_row in labels.iterrows():
+        key_words.extend([label_row.Keyword_1, label_row.Keyword_2, label_row.Keyword_3,
+                          label_row.Keyword_4, label_row.Keyword_5])
         for email_index, email_row in data.iterrows():
             if label_row.Date == email_row.date:
-                email_with_id = email_row.append(pd.Series([label_row.Email_ID], index=['email_ID_from_label']))
-                final = final.append(email_with_id, ignore_index=True)
-
+                if are_key_words_ok(email_row.content+email_row.subject, key_words):
+                    email_with_id = email_row.append(pd.Series([label_row.Email_ID], index=['email_ID_from_label']))
+                    final = final.append(email_with_id, ignore_index=True)
+                    key_words.clear()
     return final
+
+
+def are_key_words_ok(content: str, key_words: []):
+    content_lowercase = ""
+    for char in content:
+        if isinstance(char, str):
+            content_lowercase += char.lower()
+        else:
+            content_lowercase += char
+    return all(ele in content_lowercase for ele in key_words)
 
 
 def save_final_emails(data: pd.DataFrame, path: str) -> None:
