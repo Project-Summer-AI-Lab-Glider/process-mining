@@ -56,7 +56,6 @@ def __download_data(data_download_url: str, dtype: str) -> List[Dict[str, str]]:
                 row_msg = driver.find_element_by_id(f"msg-{i}")
                 author = row_msg.find_element_by_class_name("author")
                 subject = row_msg.find_element_by_class_name("subject")
-                date = row_msg.find_element_by_class_name("date")
                 try:
                     content_url = subject.find_element_by_tag_name("a")
                 except NoSuchElementException:
@@ -66,7 +65,6 @@ def __download_data(data_download_url: str, dtype: str) -> List[Dict[str, str]]:
                         "id": record_id,
                         "author": author.text,
                         "subject": subject.text,
-                        "date": date.text,
                         "content_url": content_url.get_attribute("href") or None,
                         "dtype": dtype
                     })
@@ -110,6 +108,7 @@ def __save_data_to_path(raw_data: List[Dict[str, str]], path: str) -> bool:
     """
     data_to_save: List[Dict[str, str]] = []
     for record in raw_data:
+        record["date"] = __get_xml_data(record.get("content_url"), "date")
         record["content"] = __get_xml_data(record.get("content_url"), "contents")
         data_to_save.append(record)
     try:
@@ -160,6 +159,6 @@ if __name__ == "__main__":
 
     urls = [DATA_USERS_DOWNLOAD_URL, DATA_COMMITS_DOWNLOAD_URL, DATA_ISSUES_DOWNLOAD_URL, DATA_MAIL_DOWNLOAD_URL]
 
-    for url, name in zip(urls, ["users", "commits", "issues", "mails"]):
+    for url, name in zip(urls, ["users", "commits", "issues", "mail"]):
         filename = f"/{name}_data{uuid.uuid4()}.csv"
         load_data(url, path=args.path + filename if args.path else OUTPUT_DIR + filename, dtype=name)

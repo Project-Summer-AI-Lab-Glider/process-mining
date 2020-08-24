@@ -45,9 +45,9 @@ def concat_data(data: List[pd.DataFrame]) -> pd.DataFrame:
 
 
 def update_dates(df: pd.DataFrame) -> None:
-    df['date'] = df['date'] + ' 2017'
-    df['date'] = pd.to_datetime(df['date'], format="%a, %d %b, %H:%M %Y")
-    df['date'] = df['date'].astype(str).str[:-3]
+    df['date'] = df['date'].astype(str).str[:-4]
+    df['date'] = pd.to_datetime(df['date'], format="%a, %d %b %Y %H:%M:%S")
+
 
 
 def save_data(data: pd.DataFrame, path: str) -> None:
@@ -87,10 +87,10 @@ if __name__ == "__main__":
         logging.info(f"{DATA_DIR} was created successfully.")
 
     DATA_URLS = [
-        'commits_databeef6be9-ea89-4955-ab43-c644eb39b419',
-        'issues_data5ccef963-6b66-4871-8959-66abf8b8c498',
-        'mails_data833c3053-e431-40c6-bb6a-24c4d19e9b67',
-        'users_data94b2e7c2-f2f3-40ba-a8cb-fc1f287feafa',
+        'commits_data738a1791-db22-405f-a9f9-2207820dd591',
+        'issues_dataa758a624-b518-4b21-98ea-b8de45734bd1',
+        'mail_data5afb008d-62a5-4e14-a0fb-095977a91eeb',
+        'users_datac5fc8ea1-4840-415b-a057-e06546b8e19f',
     ]
 
     filename = '/merged_data.csv'
