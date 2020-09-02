@@ -12,6 +12,7 @@ def count_words(clean_data):
     cv_counts = cv.transform(clean_data)
     cv_counts_pd= pd.DataFrame(cv_counts.toarray())
     cv_counts_pd.columns = cv_fit.get_feature_names()
+    print(cv_counts_pd)
 
     return cv_counts_pd
 
@@ -36,7 +37,7 @@ if __name__ == "__main__":
     ROOT_PATH = os.path.abspath(os.path.join(SRC_PATH, os.pardir))
     DATA_DIR = os.path.join(ROOT_PATH, 'data')
 
-    data = pd.read_csv(f'{DATA_DIR}/cleaned_emails.csv').content
+    data = pd.read_csv(f'{DATA_DIR}/cleaned_emails.csv').content + pd.read_csv(f'{DATA_DIR}/cleaned_emails.csv').subject
 
     cv = count_words(data)
     filename1 = '/counted_words.csv'

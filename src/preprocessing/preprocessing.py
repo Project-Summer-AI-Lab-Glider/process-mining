@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import RegexpTokenizer
 
-from merge_data.merge_data import save_data
+from src.merge_data.merge_data import save_data
 
 
 def remove_non_alphanumeric(text):
@@ -25,6 +25,30 @@ def remove_html(text):
 def remove_stopwords(text):
     words = [word for word in text if word not in stopwords.words('english')]
     return words
+
+
+def remove_code(all_emails):
+    print(all_emails[0])
+    for i in range(len(all_emails)):
+        email = all_emails[i].split(" ")
+        contains_code = False
+        index = 0
+        for j in range(len(email)):
+            if email[j] == "--git":
+                contains_code = True
+                index = j
+        if contains_code:
+            all_emails[i] = " ".join(email[0:index])
+    print(all_emails[0])
+    return all_emails
+
+
+def remove_numbers(all_emails):
+    for i in range(len(all_emails)):
+        email = all_emails[i].split(" ")
+        email = [word for word in email if not any(i.isdigit() for i in word)]
+        all_emails[i] = " ".join(email)
+    return all_emails
 
 
 def clean_text(content: pd.Series) -> pd.Series:
@@ -48,7 +72,10 @@ def clean_text(content: pd.Series) -> pd.Series:
     # Lemmatization
     lemmatizer = WordNetLemmatizer()
     cleaned_content = cleaned_content.apply(lambda elem: " ".join([lemmatizer.lemmatize(word) for word in elem]))
-
+    # remove code
+    cleaned_content = remove_code(cleaned_content)
+    # remove numbers
+    cleaned_content = remove_numbers(cleaned_content)
     return cleaned_content
 
 
@@ -67,7 +94,9 @@ if __name__ == "__main__":
     s1 = pd.read_csv(f'{DATA_DIR}/s1.csv')
     data['content'] = clean_text(data['content'])
     data['subject'] = clean_text(data['subject'])
+
     filename = '/cleaned_emails.csv'
     path = DATA_DIR + filename
 
     save_data(data, path)
+
